@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.melika.forex'
-    compileSdk 33
+    compileSdk $android_compile_sdk_version
 
     defaultConfig {
         applicationId "com.melika.forex"
-        minSdk 24
-        targetSdk 33
+        minSdk $android_min_sdk_version
+        targetSdk $android_target_sdk_version
         versionCode 1
         versionName "1.0"
 
