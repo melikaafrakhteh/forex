@@ -6,4 +6,10 @@ ext {
 
     //Libraries
     compose_ui_version = '1.2.0'
+    coroutine_version = '1.6.4'
+
+    domainDependencies = [
+            coroutineAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutine_version}",
+            coroutineCore: "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutine_version}",
+    ]
 }
