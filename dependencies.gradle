@@ -8,6 +8,9 @@ ext {
     compose_ui_version = '1.2.0'
     coroutine_version = '1.6.4'
     dagger_version = '2.40.5'
+    retrofit_version = '2.9.0'
+    okHttp3_version = '3.4.1'
+    gson_version = '2.10.1'
 
     domainDependencies = [
             coroutineAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutine_version}",
@@ -19,5 +22,15 @@ ext {
             daggerAndroidSupport: "com.google.dagger:dagger-android-support:$dagger_version",
             daggerProcessor: "com.google.dagger:dagger-android-processor:$dagger_version",
             daggerCompiler: "com.google.dagger:dagger-compiler:$dagger_version",
+    ]
+
+    remoteDependencies = [
+            retrofit: "com.squareup.retrofit2:retrofit:$retrofit_version",
+            okHttp: "com.squareup.okhttp3:okhttp:$okHttp3_version",
+            okHttpLogger: "com.squareup.okhttp3:logging-interceptor:$okHttp3_version",
+            gson: "com.google.code.gson:gson:$gson_version",
+            retrofitConvertor: "com.squareup.retrofit2:converter-gson:$retrofit_version",
+            coroutineAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutine_version}",
+            coroutineCore: "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutine_version}",
     ]
 }

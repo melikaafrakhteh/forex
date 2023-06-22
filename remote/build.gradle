@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+}
+dependencies {
+    def remoteDependencies = rootProject.ext.remoteDependencies
+
+    implementation remoteDependencies.retrofit
+    implementation remoteDependencies.okHttp
+    implementation remoteDependencies.okHttpLogger
+    implementation remoteDependencies.gson
+    implementation remoteDependencies.retrofitConvertor
+    implementation remoteDependencies.coroutineAndroid
+    implementation remoteDependencies.coroutineCore
+
+    implementation project(":data")
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
